@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Somni AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAkG-FXxYga_FNSogVneiRPidsy1Xyx_5-isM0kwA7ygPTSXyYH3HxxQ9H0RcW_JLdAV25pUyDiR0F4Bw&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+</head>
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">⭕ Somni</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="theme-toggle">🌙</div>
+        </div>
+    </nav>
+
+    <section class="pricing-hero">
+        <div class="container">
+            <h1>One-time Payment. Lifetime Value.</h1>
+            <p class="pricing-subtitle">No subscriptions. Pay once, own forever.</p>
+            
+            <!-- HIDDEN PROMO (Only you know - Inspect Element) -->
+            <div id="promo-section" style="display:none; padding:2rem; background:rgba(255,255,255,0.1); border-radius:20px; margin:2rem 0; text-align:center;">
+                <input type="text" id="promo-input" placeholder="Promo code" style="padding:1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.3); background:rgba(255,255,255,0.1); color:inherit; width:300px;">
+                <button class="cta-primary" onclick="applyPromo()" style="margin-left:1rem;">Unlock Elite</button>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="price-card free">
+                    <div class="plan-badge">Most Popular</div>
+                    <h3>Free Forever</h3>
+                    <div class="price">$0<span>LIFETIME</span></div>
+                    <ul>
+                        <li>✓ Sleep debt calculator</li>
+                        <li>✓ Basic bedtime window</li>
+                        <li>✓ 7-day log history</li>
+                        <li>✓ Mobile app</li>
+                    </ul>
+                    <a href="signup.html" class="cta-primary">Start Free</a>
+                </div>
+
+                <div class="price-card core popular">
+                    <div class="plan-badge">Recommended</div>
+                    <h3>Core</h3>
+                    <div class="price">$9.99<span>1 Year</span></div>
+                    <ul>
+                        <li>✓ Sport-adjusted needs</li>
+                        <li>✓ Feeling correlation AI</li>
+                        <li>✓ Full sleep history</li>
+                        <li>✓ All Free features</li>
+                    </ul>
+                    <div id="paypal-core"></div>
+                </div>
+
+                <div class="price-card pro">
+                    <h3>Pro</h3>
+                    <div class="price">$29.99<span>1 Year</span></div>
+                    <ul>
+                        <li>✓ Weekly recovery planner</li>
+                        <li>✓ Habit optimization</li>
+                        <li>✓ Full AI Coach access</li>
+                        <li>✓ All Core features</li>
+                    </ul>
+                    <div id="paypal-pro"></div>
+                </div>
+
+                <div class="price-card elite">
+                    <div class="plan-badge">Best Value</div>
+                    <h3>Elite Lifetime</h3>
+                    <div class="price">$99.99<span>FOREVER</span></div>
+                    <ul>
+                        <li>✓ Everything included</li>
+                        <li>✓ Advanced analytics</li>
+                        <li>✓ Priority features</li>
+                        <li>✓ Future updates free</li>
+                    </ul>
+                    <div id="paypal-elite"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // PayPal Buttons with Plan Unlocks
+        paypal.HostedButtons({
+            hostedButtonId: "PXP2X6MMCT2XJ",
+            onApproved: function() {
+                setPlan('core');
+                window.location.href = 'dashboard.html?plan=core';
+            }
+        }).render("#paypal-core");
+
+        paypal.HostedButtons({
+            hostedButtonId: "Z5PAEPZMQ5HD2",
+            onApproved: function() {
+                setPlan('pro');
+                window.location.href = 'dashboard.html?plan=pro';
+            }
+        }).render("#paypal-pro");
+
+        paypal.HostedButtons({
+            hostedButtonId: "MNTEEM7ZNE4NJ",
+            onApproved: function() {
+                setPlan('elite');
+                window.location.href = 'dashboard.html?plan=elite';
+            }
+        }).render("#paypal-elite");
+    </script>
+</body>
+</html>
