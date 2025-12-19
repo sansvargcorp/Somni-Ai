@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somni AI - Track Sleep Like Calories</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3b82f6">
+</head>
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">⭕ Somni</div>
+            <ul class="nav-menu">
+                <li><a href="#how">How It Works</a></li>
+                <li><a href="#science">Science</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="demo.html">Live Demo</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="theme-toggle">🌙</div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo-symbol">⭕</div>
+            <h1>Track Sleep Like Calories</h1>
+            <p class="hero-subtitle">Precise sleep debt calculation. Minimum 4-step routine to zero it. Engineered for performance, not motivation.</p>
+            
+            <div class="demo-calculator">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Avg Bedtime</label>
+                        <input type="time" id="demo-bed" value="23:00">
+                    </div>
+                    <div class="input-group">
+                        <label>Avg Wake</label>
+                        <input type="time" id="demo-wake" value="07:00">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Sport Level</label>
+                        <select id="demo-sport">
+                            <option value="0">None</option>
+                            <option value="0.5">Gym (3x/week)</option>
+                            <option value="1">Athlete (daily)</option>
+                        </select>
+                    </div>
+                    <button class="cta-primary" onclick="calculateDemoDebt()">Calculate My Debt</button>
+                </div>
+                <div id="demo-result" class="demo-result"></div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="signup.html" class="cta-primary">Start Free →</a>
+                <a href="#features" class="cta-secondary">See All Features</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="how" class="section how-works">
+        <div class="container">
+            <h2>How Somni Works (3 Steps)</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Log Sleep</h3>
+                    <p>Bedtime + wake time. Instant debt math. 15 seconds max.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Get Routine</h3>
+                    <p>Screen cutoff → wind-down → bedtime window → target hours. 4 steps only.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>AI Coach</h3>
+                    <p>Sleep engineer answers your questions. Debt-based only. No fluff.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="science" class="section science">
+        <div class="container">
+            <h2>The Sleep Debt Math</h2>
+            <div class="science-grid">
+                <div class="science-card">
+                    <h3>Formula</h3>
+                    <p><strong>Weekly Debt =</strong><br>(52.5h + sport modifier) - actual sleep</p>
+                    <div class="formula">Gym: +3.5h/week | Athlete: +7h/week</div>
+                </div>
+                <div class="science-card">
+                    <h3>Recovery</h3>
+                    <p>Debt ÷ 5 = recovery nights needed<br><em>Fri = controlled damage (+2h tolerance)</em></p>
+                </div>
+                <div class="science-card">
+                    <h3>Sunday Reset</h3>
+                    <p>Mon-Thu strict → Fri flex → Sun recovery<br>Matches real life patterns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section features">
+        <div class="container">
+            <h2>Feature Matrix</h2>
+            <div class="features-table">
+                <table>
+                    <thead>
+                        <tr><th></th><th>Free</th><th>Core $9.99</th><th>Pro $29.99</th><th>Elite $99.99</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Sleep Debt Tracker</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                        <tr><td>Basic Routine</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                        <tr><td>Sport Adjustment</td><td></td><td>✓</td><td>✓</td><td>✓</td></tr>
+                        <tr><td>Feeling AI</td><td></td><td>✓</td><td>✓</td><td>✓</td></tr>
+                        <tr><td>Weekly Planner</td><td></td><td></td><td>✓</td><td>✓</td></tr>
+                        <tr><td>Full AI Coach</td><td></td><td></td><td>✓</td><td>✓</td></tr>
+                        <tr><td>Lifetime Access</td><td></td><td></td><td></td><td>✓</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Zero Your Debt?</h2>
+            <div class="cta-buttons">
+                <a href="pricing.html" class="cta-primary">View Plans</a>
+                <a href="demo.html" class="cta-secondary">Try Demo First</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
