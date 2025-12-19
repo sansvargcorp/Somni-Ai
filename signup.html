@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Somni AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">⭕ Somni</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <div class="theme-toggle">🌙</div>
+        </div>
+    </nav>
+
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="logo-symbol">⭕</div>
+            <h1>Start Free</h1>
+            <p class="auth-subtitle">Create account. Track sleep debt instantly.</p>
+            <form id="signup-form" onsubmit="handleSignup(event)">
+                <input type="text" id="signup-username" placeholder="Choose username" required class="form-input">
+                <input type="password" id="signup-password" placeholder="Password" required class="form-input">
+                <div class="sport-selector">
+                    <label>Sport Level</label>
+                    <select id="signup-sport" class="form-input">
+                        <option value="none">No sport</option>
+                        <option value="gym">Gym (3x/week)</option>
+                        <option value="athlete">Athlete (daily)</option>
+                    </select>
+                </div>
+                <button type="submit" class="cta-primary full-width">Create Free Account</button>
+            </form>
+            <p class="auth-link">Have account? <a href="login.html">Login</a></p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
