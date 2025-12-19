@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Somni AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <nav class="navbar app-nav">
+        <div class="nav-container">
+            <div class="logo">⭕ Somni</div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="active">Debt</a></li>
+                <li><a href="log-sleep.html">Log</a></li>
+                <li><a href="routine.html">Tonight</a></li>
+                <li><a href="coach.html">Coach</a></li>
+                <li><a href="feeling.html" id="feeling-link" class="locked">Feeling</a></li>
+                <li><a href="weekly.html" id="weekly-link" class="locked">Weekly</a></li>
+                <li><a href="pricing.html">Upgrade</a></li>
+                <li><a href="settings.html">⚙️</a></li>
+            </ul>
+            <div class="theme-toggle">🌙</div>
+        </div>
+    </nav>
+
+    <section class="dashboard-hero">
+        <div class="container">
+            <div class="debt-metrics">
+                <div class="debt-display">
+                    <h1 id="current-debt">0.0h</h1>
+                    <p id="debt-label">Weekly sleep debt</p>
+                </div>
+                <div class="last-night">
+                    <h3>Last Night</h3>
+                    <p id="last-night">--</p>
+                </div>
+            </div>
+            
+            <div class="quick-actions">
+                <a href="log-sleep.html" class="cta-primary">Log Last Night</a>
+                <a href="routine.html" class="cta-secondary">Tonight's Routine</a>
+                <a href="coach.html" class="cta-secondary">Ask Coach</a>
+            </div>
+
+            <div class="plan-status">
+                <span id="plan-badge">Free Plan</span>
+                <a href="pricing.html" class="upgrade-link">Upgrade →</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
